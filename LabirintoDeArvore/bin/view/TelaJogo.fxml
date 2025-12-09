@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+ 
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="view.TelaJogoController"
+            prefWidth="1200" prefHeight="800">
+ 
+    <!-- TOPO: Status do Jogador -->
+    <VBox spacing="20" BorderPane.alignment="TOP_CENTER" style="-fx-padding: 30;">
+        <Label text="Status do Jogador"
+              style="-fx-font-size: 36px; -fx-font-weight: bold;" />
+
+        <HBox spacing="80" alignment="CENTER">
+            <Label fx:id="lblVida"   style="-fx-font-size: 40px; -fx-font-weight: bold;" />
+            <Label fx:id="lblAtaque" style="-fx-font-size: 40px; -fx-font-weight: bold;" />
+            <Label fx:id="lblDefesa" style="-fx-font-size: 40px; -fx-font-weight: bold;" />
+            <Label fx:id="lblChaves" style="-fx-font-size: 40px; -fx-font-weight: bold;" />
+        </HBox>
+    </VBox>    <!-- CENTRO: Sala Atual + Histórico -->
+    <VBox spacing="15" BorderPane.alignment="CENTER" style="-fx-padding: 30;">
+        <Label fx:id="lblTipoSala"
+              style="-fx-font-size: 28px; -fx-font-weight: bold;"
+              text="Sala Atual:" />
+
+        <VBox spacing="10">
+            <Label text="Histórico da Fase:"
+                   style="-fx-font-size: 22px;" />
+            <TextArea fx:id="txtHistorico"
+                      prefWidth="1000"
+                      prefHeight="280"
+                      editable="false"
+                      wrapText="true"
+                      style="-fx-font-size: 15px;" />
+        </VBox>
+    </VBox>
+ 
+    <!-- RODAPÉ: Botões de navegação -->
+    <VBox spacing="20" BorderPane.alignment="BOTTOM_CENTER" style="-fx-padding: 30;">
+        <Label text="Movimentação"
+              style="-fx-font-size: 26px; -fx-font-weight: bold;" />
+
+        <HBox spacing="35" alignment="CENTER">
+            <Button fx:id="btnFilho1"
+                    text="Filho 1"
+                    onAction="#irFilho1"
+                    prefWidth="180" prefHeight="70"
+                    style="-fx-font-size: 20px; -fx-padding: 15;" />
+
+            <Button fx:id="btnFilho2"
+                    text="Filho 2"
+                    onAction="#irFilho2"
+                    prefWidth="180" prefHeight="70"
+                    style="-fx-font-size: 20px; -fx-padding: 15;" />
+
+            <Button fx:id="btnFilho3"
+                    text="Filho 3"
+                    onAction="#irFilho3"
+                    prefWidth="180" prefHeight="70"
+                    style="-fx-font-size: 20px; -fx-padding: 15;" />
+
+            <Button fx:id="btnVoltar"
+                    text="Voltar"
+                    onAction="#voltarParaPai"
+                    prefWidth="180" prefHeight="70"
+                    style="-fx-font-size: 20px; -fx-padding: 15; -fx-background-color: #ff5555; -fx-text-fill: white;" />
+        </HBox>
+    </VBox></BorderPane>

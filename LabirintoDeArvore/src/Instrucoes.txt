@@ -1,0 +1,63 @@
+/**
+* ============================================================================
+*                              LABIRINTO DE ÁRVORE
+* ============================================================================
+*
+* Descrição Geral:
+* O Labirinto de Árvore é um jogo desenvolvido em Java utilizando o padrão
+* arquitetural MVC e representado internamente por uma Árvore N-Ária. Cada
+* fase do jogo corresponde a uma árvore distinta, na qual cada nó representa
+* uma sala que o jogador pode explorar.
+*
+* Estrutura de Dados Utilizada:
+* A estrutura central do projeto é uma Árvore N-Ária, construída e manipulada
+* dinamicamente durante o jogo. A árvore possui operações reais de:
+*   - inserção de nós;
+*   - remoção de nós;
+*   - reorganização (distribuição) de subárvores;
+*   - percursos BFS/DFS e buscas eficientes.
+*
+* O mapa de cada fase é construído por meio de inserções sucessivas de nós,
+* sempre respeitando um grau máximo por sala. A posição de elementos
+* importantes (chaves, buffs, inimigos e saída) é determinada utilizando
+* percursos BFS, garantindo distância adequada e distribuição equilibrada.
+*
+* Funcionamento:
+* O jogador inicia sempre na raiz da árvore (sala inicial) e pode:
+*   - mover-se para qualquer nó filho;
+*   - retornar ao nó pai;
+*   - coletar chaves;
+*   - receber buffs automáticos (vida, ataque e defesa);
+*   - enfrentar inimigos em salas específicas.
+*
+* Ao derrotar um inimigo, o nó correspondente é removido da árvore e seus
+* filhos são promovidos ao nível superior, exigindo reorganização da
+* subárvore. O jogador retorna automaticamente ao nó pai após a remoção.
+* Essa mecânica demonstra a manipulação real da Árvore N-Ária.
+*
+* Fases:
+* O jogo possui 4 fases, cada uma com tamanho fixo:
+*   - Fase 1: 7 nós (apenas encontrar a saída)
+*   - Fase 2: 9 nós (coletar 1 chave e encontrar a saída)
+*   - Fase 3: 12 nós (coletar 1 chave, derrotar 1 inimigo e sair)
+*   - Fase 4: 15 nós (enfrentar inimigo final e acessar a saída)
+*
+* Em fases que possuem inimigos, o inimigo é sempre colocado no nó pai da
+* saída. Dessa forma, para concluir a fase, o jogador obrigatoriamente deve
+* derrotar o inimigo antes de alcançar a saída.
+*
+* Interface:
+* A interface gráfica é implementada com Swing, contendo:
+*   - exibição dos atributos do jogador (vida, ataque, defesa, chaves);
+*   - identificação do conteúdo da sala atual;
+*   - botões de movimentação (filhos + voltar);
+*   - avisos e mensagens apresentados via classe Dialogos.
+*
+* Objetivo do Projeto:
+* O projeto demonstra de forma clara o uso significativo da Árvore N-Ária como
+* estrutura de dados essencial para o funcionamento do jogo, atendendo aos
+* requisitos acadêmicos de manipulação, percursos e reorganização da
+* estrutura, bem como integração com lógica e regras de gameplay.
+*
+* ============================================================================
+*/

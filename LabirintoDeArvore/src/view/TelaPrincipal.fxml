@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+ 
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="view.TelaPrincipalController"
+            prefWidth="600" prefHeight="400">
+ 
+    <padding>
+        <Insets top="20" left="20" bottom="20" right="20"/>
+    </padding>
+ 
+    <Label text="Labirinto de Árvore"
+           AnchorPane.topAnchor="80.0"
+           AnchorPane.leftAnchor="150.0"
+           AnchorPane.rightAnchor="150.0"
+           style="-fx-font-size: 28px;"
+           alignment="CENTER"/>
+ 
+    <Button text="Iniciar Jogo"
+            fx:id="btnIniciar"
+            AnchorPane.topAnchor="150.0"
+            AnchorPane.leftAnchor="200.0"
+            AnchorPane.rightAnchor="200.0"
+            onAction="#iniciarJogo"
+            prefWidth="100.0"/>
+ 
+</AnchorPane>
